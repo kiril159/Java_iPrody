@@ -40,7 +40,7 @@ public class HomeWorkApp {
         int value = -100;
         if(value <= 0){
             System.out.println("Красный");
-        } else if (value > 0 && value <= 100){
+        } else if (value <= 100){
             System.out.println("Желтый");
         } else {
             System.out.println("Зеленый");
@@ -73,17 +73,7 @@ public class HomeWorkApp {
         }
     }
     public static boolean checkTypeYear(int a){
-        if (a % 4 == 0) {
-            if (a % 400 == 0){
-                return true;
-            }
-            if (a % 100 == 0) {
-                return false;
-            }
-            return true;
-        } else {
-            return false;
-        }
+        return ((a % 4 == 0)&&(a % 100 != 0)||(a % 400 == 0));
     }
 
 }
