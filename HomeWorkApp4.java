@@ -16,8 +16,8 @@ public class HomeWorkApp4 {
 
         //System.out.println("Задание №4.1:");
         //mainDiagonalArray(new int[10][10]);
-        //System.out.println("Задание 4.2:");
-        //maiAdditionDiagonalArray(new int[10][10]);
+        System.out.println("Задание 4.2:");
+        maiAdditionDiagonalArray(new int[10][10]);
 
         //System.out.println("Задание №5:");
         //System.out.println(Arrays.toString(createArray(10,7)));
@@ -26,9 +26,9 @@ public class HomeWorkApp4 {
         //int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, -100 };
         //minMaxValue(arr);
 
-        System.out.println("Задание №7:");
-        int[] arr = {1, 1, 1, 2, 1, 2 };
-        System.out.println(isBalance(arr));
+        //System.out.println("Задание №7:");
+        //int[] arr = {1, 1, 1, 2, 1, 2 };
+        //System.out.println(isBalance(arr));
 
 
 
@@ -37,6 +37,7 @@ public class HomeWorkApp4 {
 
     public static void replacementArray(int[] arr){
         for (int i = 0; i < arr.length; i++) {
+            //arr[i] = arr[i] == 0 ? 1 : 0;
             if (arr[i]==0){
                 arr[i]=1;
             } else { arr[i]=0;}
@@ -52,6 +53,7 @@ public class HomeWorkApp4 {
     }
     public static int[] multiplicationArray(int[] arr){
         for (int i = 0; i < arr.length; i++) {
+            //arr[i] = arr[i] > 6 ? arr[i]*2 : arr[i];
             if (arr[i] < 6){
                 arr[i] *= 2;
             }
@@ -64,7 +66,7 @@ public class HomeWorkApp4 {
                 if (i == j){
                     arr[i][j] = 1;
                 }
-                System.out.print(arr[i][j]);
+                System.out.print(arr[i][j] + " ");
             }
             System.out.println();
         }
@@ -74,13 +76,10 @@ public class HomeWorkApp4 {
         int lengthX = arr.length;
         for (int i = 0; i < lengthX; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                if (i == j){
+                if (i == j || j == arr[i].length -i -1) {
                     arr[i][j] = 1;
                 }
-                if (i + j + 1 == lengthX ){
-                    arr[i][j] = 1;
-                }
-                System.out.print(arr[i][j]);
+                System.out.print(arr[i][j] + "  ");
             }
             System.out.println();
         }
